@@ -1,6 +1,5 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react"
 import Link from "next/link"
-import { Skills } from "./skills"
 const Footer = () => {
 
   return (
@@ -99,7 +98,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <Skills />
       </div>
     </footer>
   )
