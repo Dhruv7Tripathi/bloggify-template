@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button"
 import { AnimatedGroup } from "@/components/ui/animated-group"
 import Navbar from "./navbar"
 import Footer from "./footer"
-import { ContainerScroll } from "@/components/ui/container-scroll-animation"
 import { faqItems } from "@/contants/index"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Features } from "../ui/features"
+import { SectionMockupDemoPage } from "@/components/feature"
 const transitionVariants = {
   item: {
     hidden: {
@@ -130,32 +130,11 @@ export function HeroSection() {
           </div>
 
           <div className="flex flex-col overflow-hidden pb-16 pt-20 md:pt-32">
-            <ContainerScroll
-              titleComponent={
-                <div className="text-center mb-8">
-                  <h2 className="text-2xl md:text-3xl font-bold text-muted-foreground mb-2">Experience the Platform</h2>
-                  <p className="text-muted-foreground/80">See how our intuitive interface makes blogging effortless</p>
-                </div>
-              }
-            >
-              <div className="relative">
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-xl z-10" /> */}
-                <Image
-                  src={`/bloggify.png`}
-                  alt="Bloggify platform interface showcasing the intuitive blog creation experience"
-                  height={720}
-                  width={1400}
-                  className="mx-auto rounded-xl"
-                  draggable={false}
-                />
-              </div>
-            </ContainerScroll>
+
+            <SectionMockupDemoPage />
+            <Features />
           </div>
         </section>
-        <div>
-          <Features />
-        </div>
-
         <section className="w-full py-20 sm:py-24 bg-black border-t border-border/50">
           <div className="container px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">

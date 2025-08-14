@@ -5,8 +5,8 @@ import { ReactNode } from 'react'
 
 export function Features() {
   return (
-    <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-5xl">
+    <section className="bg-zinc-50 py-16 md:py-32 dark:bg-black">
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl">
         <div className="mx-auto grid gap-4 lg:grid-cols-2">
           <FeatureCard>
             <CardHeader className="pb-3">
