@@ -8,8 +8,8 @@ import Image from 'next/image';
 
 const menuItems = [
   { name: 'Home', href: '/' },
-  { name: 'Posts', href: '/allpost' },
-  { name: 'write', href: '/write' },
+  { name: 'Posts', href: '/#posts' },
+  { name: 'write', href: '/#write' },
 ]
 
 const Navbar = () => {
@@ -89,8 +89,9 @@ const Navbar = () => {
                   variant="outline"
                   size="sm"
                   className={cn(isScrolled && 'lg:hidden')}>
-
-                  <span>SignIn</span>
+                  <Link href="/signin">
+                    <span>SignIn</span>
+                  </Link>
 
                 </Button>
               </div>

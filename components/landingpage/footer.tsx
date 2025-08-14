@@ -41,12 +41,12 @@ const Footer = () => {
               <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
                 <span>Building in public at</span>
                 <Link
-                  href="https://twitter.com/dhruvtripathi77"
+                  href="https://layrdui.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 font-medium text-primary hover:text-primary/80 transition-colors duration-200"
                 >
-                  @dhruv7tripathi
+                  @LayrdUI
                   <ExternalLink className="size-3" />
                 </Link>
               </div>
@@ -79,43 +79,46 @@ const Footer = () => {
               </div>
             </div>
 
-            <div>
-              <h4 className="font-semibold text-foreground mb-6 text-lg">Navigation</h4>
-              <div className="flex flex-col space-y-4">
-                {[
-                  { href: "/write", label: "Write" },
-                  { href: "/allpost", label: "Blogs" },
-                  { href: "/about", label: "About" },
-                  { href: "/contact", label: "Contact" },
-                ].map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-200 group flex items-center gap-2"
-                  >
-                    {link.label}
-                    <ArrowRight className="size-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <div className="flex flex-row gap-24 ml-24 justify-end  space-y-4 lg:col-span-2">
 
-            <div>
-              <h4 className="font-semibold text-white mb-6 text-lg">Resources</h4>
-              <div className="flex flex-col space-y-4">
-                {[
-                  { href: "/privacy", label: "Privacy Policy" },
-                  { href: "/terms", label: "Terms of Service" },
-                ].map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-200 group flex items-center gap-2"
-                  >
-                    {link.label}
-                    <ArrowRight className="size-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
-                  </Link>
-                ))}
+              <div className="">
+                <h4 className="font-semibold text-foreground mb-6 text-lg">Navigation</h4>
+                <div className="flex flex-col space-y-4">
+                  {[
+                    { href: "#write", label: "Write" },
+                    { href: "#allpost", label: "Blogs" },
+                    { href: "#about", label: "About" },
+                    { href: "#contact", label: "Contact" },
+                  ].map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="text-muted-foreground hover:text-foreground transition-colors duration-200 group flex items-center gap-2"
+                    >
+                      {link.label}
+                      <ArrowRight className="size-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold text-white mb-6 text-lg">Resources</h4>
+                <div className="flex flex-col space-y-4">
+                  {[
+                    { href: "/privacy", label: "Privacy Policy" },
+                    { href: "/terms", label: "Terms of Service" },
+                  ].map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="text-muted-foreground hover:text-foreground transition-colors duration-200 group flex items-center gap-2"
+                    >
+                      {link.label}
+                      <ArrowRight className="size-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -133,7 +136,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="font-medium text-primary hover:text-primary/80 transition-colors duration-200"
               >
-                Dhruv Tripathi
+                LayrdUI
               </Link>
             </div>
           </div>
