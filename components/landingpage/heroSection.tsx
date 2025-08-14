@@ -3,12 +3,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
-// import { AnimatedGroup } from "@/components/ui/animated-group"
+import { AnimatedGroup } from "@/components/ui/animated-group"
 import Navbar from "./navbar"
-// import Footer from "./footer"
-// import { ContainerScroll } from "@/components/ui/container-scroll-animation"
-// import { faqItems } from "@/contants/index"
-// import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import Footer from "./footer"
+import { ContainerScroll } from "@/components/ui/container-scroll-animation"
+import { faqItems } from "@/contants/index"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const transitionVariants = {
   item: {
@@ -22,7 +22,7 @@ const transitionVariants = {
       filter: "blur(0px)",
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         bounce: 0.3,
         duration: 1.5,
       },
@@ -54,7 +54,7 @@ export function HeroSection() {
 
             <div className="mx-auto max-w-7xl px-6">
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
-                {/* <AnimatedGroup variants={transitionVariants}>
+                <AnimatedGroup variants={transitionVariants}>
                   <Link
                     href="/about"
                     className="hover:bg-background/80 dark:hover:border-t-border bg-gradient-to-r from-muted/80 to-muted/60 backdrop-blur-sm group mx-auto flex w-fit items-center gap-4 rounded-full border border-border/50 p-1 pl-4 shadow-lg shadow-black/10 transition-all duration-300 dark:border-t-white/10 dark:shadow-zinc-950/50 hover:shadow-xl hover:scale-105"
@@ -124,13 +124,13 @@ export function HeroSection() {
                   >
                     <Link href="/explore">Explore Stories</Link>
                   </Button>
-                </AnimatedGroup> */}
+                </AnimatedGroup>
               </div>
             </div>
           </div>
 
           <div className="flex flex-col overflow-hidden pb-16 pt-20 md:pt-32">
-            {/* <ContainerScroll
+            <ContainerScroll
               titleComponent={
                 <div className="text-center mb-8">
                   <h2 className="text-2xl md:text-3xl font-bold text-muted-foreground mb-2">Experience the Platform</h2>
@@ -148,8 +148,8 @@ export function HeroSection() {
                   className="mx-auto rounded-xl object-left-top shadow-2xl"
                   draggable={false}
                 />
-              </div> */}
-            {/* </ContainerScroll> */}
+              </div>
+            </ContainerScroll>
           </div>
         </section>
 
@@ -164,7 +164,7 @@ export function HeroSection() {
               </p>
             </div>
 
-            {/* <Accordion type="single" collapsible className="max-w-4xl mx-auto space-y-4">
+            <Accordion type="single" collapsible className="max-w-4xl mx-auto space-y-4">
               {faqItems.map((item, index) => (
                 <AccordionItem
                   key={index}
@@ -179,11 +179,11 @@ export function HeroSection() {
                   </AccordionContent>
                 </AccordionItem>
               ))}
-            </Accordion> */}
+            </Accordion>
           </div>
         </section>
 
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </>
   )
