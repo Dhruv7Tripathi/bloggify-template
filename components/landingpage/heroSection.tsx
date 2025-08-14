@@ -9,7 +9,7 @@ import Footer from "./footer"
 import { ContainerScroll } from "@/components/ui/container-scroll-animation"
 import { faqItems } from "@/contants/index"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-
+import { Features } from "../ui/features"
 const transitionVariants = {
   item: {
     hidden: {
@@ -139,19 +139,22 @@ export function HeroSection() {
               }
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-xl z-10" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-xl z-10" /> */}
                 <Image
                   src={`/bloggify.png`}
                   alt="Bloggify platform interface showcasing the intuitive blog creation experience"
                   height={720}
                   width={1400}
-                  className="mx-auto rounded-xl object-left-top shadow-2xl"
+                  className="mx-auto rounded-xl"
                   draggable={false}
                 />
               </div>
             </ContainerScroll>
           </div>
         </section>
+        <div>
+          <Features />
+        </div>
 
         <section className="w-full py-20 sm:py-24 bg-black border-t border-border/50">
           <div className="container px-4 sm:px-6 lg:px-8">
