@@ -10,6 +10,7 @@ import { faqItems } from "@/contants/index"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Features } from "../ui/features"
 import { SectionMockupDemoPage } from "@/components/feature"
+import Pricing from "../pricingSection"
 const transitionVariants = {
   item: {
     hidden: {
@@ -129,12 +130,13 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="flex flex-col overflow-hidden pb-16 pt-20 md:pt-32">
-
-            <SectionMockupDemoPage />
-            <Features />
-          </div>
         </section>
+        <div className="flex bg-black flex-col overflow-hidden pb-16 pt-20 md:pt-32">
+
+          <SectionMockupDemoPage />
+          <Features />
+          <Pricing />
+        </div>
         <section className="w-full py-20 sm:py-24 bg-black border-t border-border/50">
           <div className="container px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
