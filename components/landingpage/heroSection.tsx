@@ -102,27 +102,29 @@ export function HeroSection() {
                   }}
                   className="mt-12 flex flex-col mb-8 items-center justify-center gap-4 md:flex-row"
                 >
-                  <div className="bg-gradient-to-r  from-primary/20 to-primary/10 rounded-2xl border border-primary/20 p-1 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className=" p-1 shadow-lg hover:shadow-xl transition-all duration-300">
                     <Button
                       asChild
                       size="lg"
-                      className="rounded-xl px-8 py-6 text-base font-semibold bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                      className="rounded-xl px-8 py-6 text-base font-semibold bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg hover:shadow-xl transition-all duration-300 "
                     >
                       <Link href="/blog" className="flex items-center gap-2">
                         <span className="text-nowrap">Start Blogging</span>
-                        <ArrowRight className="size-4" />
                       </Link>
                     </Button>
                   </div>
 
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    asChild
-                    className="rounded-xl px-8 py-6 text-base font-medium border-border/50 hover:border-border bg-background/50 backdrop-blur-sm hover:bg-background/80 transition-all duration-300"
-                  >
-                    <Link href="/explore">Explore Stories</Link>
-                  </Button>
+                  <Link href="/explore" className="group">
+                    <button
+                      className="rounded-xl flex flex-row px-8 py-6 text-base font-medium backdrop-blur-sm transition-all duration-300 "
+                    >
+                      <span className="flex items-center gap-2">
+                        Explore Stories
+                        <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-2" />
+                      </span>
+                    </button>
+                  </Link>
+
                 </AnimatedGroup>
               </div>
             </div>
