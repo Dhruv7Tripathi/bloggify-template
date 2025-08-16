@@ -1,6 +1,5 @@
 "use client"
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { AnimatedGroup } from "@/components/ui/animated-group"
@@ -35,8 +34,7 @@ export function HeroSection() {
   return (
     <>
       <Navbar />
-      <main className="overflow-hidden">
-        {/* Enhanced background gradients */}
+      <main className="overflow-hidden bg-black">
         <div
           aria-hidden
           className="z-[2] absolute inset-0 pointer-events-none isolate opacity-40 contain-strict hidden lg:block"
@@ -46,11 +44,11 @@ export function HeroSection() {
           <div className="h-[80rem] -translate-y-[350px] absolute left-0 top-0 w-56 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(200,70%,85%,.06)_0,hsla(200,50%,45%,.02)_80%,transparent_100%)]" />
         </div>
 
-        <section className="relative">
+        <section className="relative rounded-b-4xl mt-tab bg-background/50 backdrop-blur-sm border-b border-border/50">
           <div className="relative pt-24 md:pt-36 pb-12">
             <div
               aria-hidden
-              className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]"
+              className="absolute inset-0 -z-10 size-full rounded-b-2xl [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]"
             />
 
             <div className="mx-auto max-w-7xl px-6">
@@ -102,9 +100,9 @@ export function HeroSection() {
                     },
                     ...transitionVariants,
                   }}
-                  className="mt-12 flex flex-col items-center justify-center gap-4 md:flex-row"
+                  className="mt-12 flex flex-col mb-8 items-center justify-center gap-4 md:flex-row"
                 >
-                  <div className="bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl border border-primary/20 p-1 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="bg-gradient-to-r  from-primary/20 to-primary/10 rounded-2xl border border-primary/20 p-1 shadow-lg hover:shadow-xl transition-all duration-300">
                     <Button
                       asChild
                       size="lg"
@@ -129,12 +127,13 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-
         </section>
+
         <div className="flex bg-black flex-col overflow-hidden pb-16 pt-20 md:pt-32">
 
           <SectionMockupDemoPage />
           <Features />
+          {/* <GoogleGeminiEffectDemo /> */}
           <Pricing />
         </div>
         <section className="w-full py-20 sm:py-24 bg-black border-t border-border/50">

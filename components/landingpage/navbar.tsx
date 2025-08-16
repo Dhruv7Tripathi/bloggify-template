@@ -28,7 +28,7 @@ const Navbar = () => {
       <nav
         data-state={menuState && 'active'}
         className="fixed z-20 w-full px-2 group">
-        <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
+        <div className={cn('mx-auto mt-2 max-w-[95rem] px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-7xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full justify-between lg:w-auto">
               <Link
@@ -40,10 +40,12 @@ const Navbar = () => {
                   alt="Bloggify Logo"
                   width={40}
                   height={40}
-                  className="h-10 w-10 rounded-full object-cover lg:h-10 lg:w-10 md:h-10 md:w-10 sm:h-8 sm:w-8"
+                  className="h-10 w-10 rounded-full  object-cover lg:h-10 lg:w-10 md:h-10 md:w-10 sm:h-8 sm:w-8"
                   priority
                 />
               </Link>
+
+              <h3 className="text-xl font-bold ml-4 text-white">Bloggify</h3>
 
               <button
                 onClick={() => setMenuState(!menuState)}
@@ -83,14 +85,19 @@ const Navbar = () => {
                   ))}
                 </ul>
               </div>
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+              <div
+                className={cn(
+                  "flex flex-col items-center space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit",
+
+                )}
+              >
                 <Button
                   asChild
                   variant="outline"
                   size="sm"
-                  className={cn(isScrolled && 'lg:hidden')}>
+                  className={cn(isScrolled && 'bg-white text-black font-semibold')}>
                   <Link href="/signin">
-                    <span>SignIn</span>
+                    <span >SignIn</span>
                   </Link>
 
                 </Button>
