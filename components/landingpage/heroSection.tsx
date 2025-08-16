@@ -10,6 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Features } from "../ui/features"
 import { SectionMockupDemoPage } from "@/components/feature"
 import Pricing from "../pricingSection"
+import { Cta4 } from "../cta-4"
 const transitionVariants = {
   item: {
     hidden: {
@@ -135,7 +136,6 @@ export function HeroSection() {
 
           <SectionMockupDemoPage />
           <Features />
-          {/* <GoogleGeminiEffectDemo /> */}
           <Pricing />
         </div>
         <section className="w-full py-20 sm:py-24 bg-black border-t border-border/50">
@@ -167,6 +167,22 @@ export function HeroSection() {
             </Accordion>
           </div>
         </section>
+        <div className="bg-black">
+
+          <Cta4
+            title="Blogging Made Easy"
+            description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto illo praesentium nisi, accusantium quae."
+            buttonText="Get Started"
+            buttonUrl="https://shadcnblocks.com"
+            items={[
+              "Easy Integration",
+              "24/7 Support",
+              "Customizable Design",
+              "Scalable Performance",
+              "Hundreds of Blocks"
+            ]}
+          />
+        </div>
 
         <Footer />
       </main>

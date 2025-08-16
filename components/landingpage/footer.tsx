@@ -8,11 +8,6 @@ const Footer = () => {
     <>
 
       <footer className="relative  bg-neutral-900/[1.89]">
-        {/* <div aria-hidden className="absolute inset-0 pointer-events-none opacity-30">
-        <div className="absolute top-0 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
-        </div> */}
-
         <div className="relative">
           <div className="max-w-7xl mx-auto px-6 py-16">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
