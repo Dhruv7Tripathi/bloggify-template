@@ -1,6 +1,5 @@
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 interface Cta4Props {
   title?: string;
@@ -28,7 +27,7 @@ export const Cta4 = ({
   return (
     <section className="py-32 ">
       <div className="container mx-auto">
-        <div className="flex flex-col border border-dashed border-neutral-700 md:flex-row items-start justify-between gap-8 rounded-lg bg-black py-10  ml-24 mr-24 px-16 lg:py-16">
+        <div className="flex flex-col border border-dashed border-neutral-700 md:flex-row items-start justify-between gap-8 rounded-lg bg-black py-10  ml-34 mr-34 px-16 lg:py-16">
           <div className="w-full md:w-1/2">
             <h4 className="mb-4 text-4xl font-bold">{title}</h4>
             <p className="text-muted-foreground max-w-prose">{description}</p>

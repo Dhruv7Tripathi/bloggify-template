@@ -29,10 +29,10 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
-  };
+  // const itemVariants = {
+  //   hidden: { opacity: 0, y: 50 },
+  //   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  // };
 
   const layoutClasses = reverseLayout
     ? "md:grid-cols-2 md:grid-flow-col-dense"
@@ -74,7 +74,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
 
           {/* App mockup/Image Content */}
           <motion.div
-            className={`relative mt-10 md:mt-0 mx-auto ${imageOrderClass} w-full max-w-[300px] md:max-w-[471px]`}
+            className={`relative mt-10 md:mt-0 mx-auto ${imageOrderClass} w-full ml-38 px-4 max-w-[300px] md:max-w-[471px]`}
           // variants={itemVariants}
           >
             {/* Decorative Background Element */}

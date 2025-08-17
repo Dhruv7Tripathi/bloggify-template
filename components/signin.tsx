@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { useState } from "react";
 
 const SignIn1 = () => {
   const [email, setEmail] = React.useState("");
@@ -35,7 +34,7 @@ const SignIn1 = () => {
         </div>
         {/* Title */}
         <h2 className="text-2xl font-semibold text-white mb-6 text-center">
-          HextaUI
+          Bloggify
         </h2>
         {/* Form */}
         <div className="flex flex-col w-full gap-4">
@@ -93,7 +92,7 @@ const SignIn1 = () => {
       <div className="relative z-10 mt-12 flex flex-col items-center text-center">
         <p className="text-gray-400 text-sm mb-2">
           Join <span className="font-medium text-white">thousands</span> of
-          developers who are already using HextaUI.
+          developers who are already using Bloggify.
         </p>
         <div className="flex">
           <img
