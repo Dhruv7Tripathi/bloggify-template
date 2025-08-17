@@ -8,7 +8,7 @@ export function Features() {
     <section className="bg-zinc-50 py-16 md:py-32 dark:bg-black">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl">
         <div className="mx-auto grid gap-4 lg:grid-cols-2">
-          <FeatureCard>
+          <FeatureCard className='bg-black'>
             <CardHeader className="pb-3">
               <CardHeading
                 icon={MapIcon}
@@ -31,7 +31,7 @@ export function Features() {
             </div>
           </FeatureCard>
 
-          <FeatureCard>
+          <FeatureCard className='bg-black'>
             <CardHeader className="pb-3">
               <CardHeading
                 icon={Calendar}
@@ -56,7 +56,7 @@ export function Features() {
             </CardContent>
           </FeatureCard>
 
-          <FeatureCard className="p-6 lg:col-span-2">
+          <FeatureCard className="p-6 lg:col-span-2 bg-black">
             <p className="mx-auto my-6 max-w-md text-balance text-center text-2xl font-semibold">Smart scheduling with automated reminders for maintenance.</p>
 
             <div className="flex justify-center gap-6 overflow-hidden">

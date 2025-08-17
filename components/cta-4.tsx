@@ -19,7 +19,7 @@ const defaultItems = [
 ];
 
 export const Cta4 = ({
-  title = "Call to Action",
+  title = "Bloggify Made Easy",
   description = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto illo praesentium nisi, accusantium quae.",
   buttonText = "Get Started",
   buttonUrl = "#",
@@ -28,16 +28,10 @@ export const Cta4 = ({
   return (
     <section className="py-32 ">
       <div className="container mx-auto">
-        <div className="flex flex-col border md:flex-row items-start justify-between gap-8 rounded-lg bg-black py-10  ml-24 mr-24 px-14 lg:py-16">
-          {/* Left side */}
+        <div className="flex flex-col border border-dashed border-neutral-700 md:flex-row items-start justify-between gap-8 rounded-lg bg-black py-10  ml-24 mr-24 px-16 lg:py-16">
           <div className="w-full md:w-1/2">
             <h4 className="mb-4 text-4xl font-bold">{title}</h4>
             <p className="text-muted-foreground max-w-prose">{description}</p>
-            {/* <Button className="mt-6" asChild>
-              <a href={buttonUrl} target="_blank" className="group ">
-                {buttonText}
-              </a>
-            </Button> */}
             <Link
               href={buttonUrl}
               className="group w-40 mt-6 flex items-center justify-center gap-2 rounded-xl border border-neutral-600 bg-neutral-950 px-5 py-3 text-sm font-semibold text-white shadow-[inset_0px_0px_7px_1px_#535353] transition-all duration-300 hover:bg-neutral-800/50 md:text-[1rem]"
@@ -46,7 +40,6 @@ export const Cta4 = ({
             </Link>
           </div>
 
-          {/* Right side */}
           <div className="w-full md:w-1/2 flex justify-end items-start">
             <ul className="flex flex-col space-y-2 text-sm font-medium">
               {items.map((item, idx) => (

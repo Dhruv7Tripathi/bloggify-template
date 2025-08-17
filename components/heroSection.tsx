@@ -7,10 +7,10 @@ import Navbar from "./navbar"
 import Footer from "./footer"
 import { faqItems } from "@/contants/index"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Features } from "../ui/features"
+import { Features } from "./ui/features"
 import { SectionMockupDemoPage } from "@/components/feature"
-import Pricing from "../pricingSection"
-import { Cta4 } from "../cta-4"
+import Pricing from "./pricingSection"
+import { Cta4 } from "./cta-4"
 const transitionVariants = {
   item: {
     hidden: {
@@ -56,7 +56,7 @@ export function HeroSection() {
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                 <AnimatedGroup variants={transitionVariants}>
                   <Link
-                    href="/about"
+                    href="/#"
                     className="hover:bg-background/80 dark:hover:border-t-border bg-gradient-to-r from-muted/80 to-muted/60 backdrop-blur-sm group mx-auto flex w-fit items-center gap-4 rounded-full border border-border/50 p-1 pl-4 shadow-lg shadow-black/10 transition-all duration-300 dark:border-t-white/10 dark:shadow-zinc-950/50 hover:shadow-xl hover:scale-105"
                   >
                     <div className="flex items-center gap-2">
@@ -77,7 +77,7 @@ export function HeroSection() {
                     </div>
                   </Link>
 
-                  <h1 className="mt-8 max-w-9xl mx-auto text-balance bg-gradient-to-br from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] font-bold leading-tight lg:mt-16">
+                  <h1 className="max-w-9xl mx-auto text-balance bg-gradient-to-br from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] font-bold leading-tight lg:mt-16">
                     The Mindful Scroll
                     Insights, Stories, and Inspiration
                   </h1>
