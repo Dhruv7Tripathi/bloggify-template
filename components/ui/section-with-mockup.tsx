@@ -29,103 +29,158 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
     },
   };
 
-  // const itemVariants = {
-  //   hidden: { opacity: 0, y: 50 },
-  //   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
-  // };
-
   const layoutClasses = reverseLayout
-    ? "md:grid-cols-2 md:grid-flow-col-dense"
-    : "md:grid-cols-2";
+    ? "lg:grid-cols-2 lg:grid-flow-col-dense"
+    : "lg:grid-cols-2";
 
-  const textOrderClass = reverseLayout ? "md:col-start-2" : "";
-  const imageOrderClass = reverseLayout ? "md:col-start-1" : "";
-
+  const textOrderClass = reverseLayout ? "lg:col-start-2" : "";
+  const imageOrderClass = reverseLayout ? "lg:col-start-1" : "";
 
   return (
-    <section className="relative py-24 md:py-48 bg-black overflow-hidden">
-      <div className="container max-w-[1320px] w-full px-6 md:px-10 relative z-10 mx-auto">
+    <section className="relative py-16 sm:py-24 lg:py-32 xl:py-48 bg-black overflow-hidden">
+      <div className="container max-w-[1320px] w-full px-4 sm:px-6 lg:px-10 relative z-10 mx-auto">
         <motion.div
-          className={`grid grid-cols-1 gap-16 md:gap-8 w-full items-center ${layoutClasses}`}
+          className={`grid grid-cols-1 gap-12 sm:gap-16 lg:gap-8 w-full items-center ${layoutClasses}`}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {/* Text Content */}
+          {/* Text Content - Mobile-first approach */}
           <motion.div
-            className={`flex flex-col items-start gap-4 mt-10 md:mt-0 max-w-[546px] mx-auto md:mx-0 ${textOrderClass}`}
-          // variants={itemVariants}
+            className={`flex flex-col items-start gap-3 sm:gap-4 max-w-full sm:max-w-[546px] mx-auto lg:mx-0 ${textOrderClass}`}
           >
-            <div className="space-y-3 md:space-y-1">
-              <h2 className="text-white text-6xl  font-semibold ">
+            <div className="space-y-2 sm:space-y-3 lg:space-y-1">
+              <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight sm:leading-tight lg:leading-normal">
                 {title}
               </h2>
             </div>
 
-            <p className="text-[#868f97] text-sm md:text-[15px] leading-6">
+            <p className="text-[#868f97] text-sm sm:text-base lg:text-[15px] leading-relaxed sm:leading-6">
               {description}
             </p>
-            {/* Optional: Add a button or link here */}
-            {/* <div>
-                            <button className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-md">Learn More</button>
-                         </div> */}
           </motion.div>
 
-          {/* App mockup/Image Content */}
+          {/* App mockup/Image Content - Mobile optimized */}
           <motion.div
-            className={`relative mt-10 md:mt-0 mx-auto ${imageOrderClass} w-full ml-38 px-4 max-w-[300px] md:max-w-[471px]`}
-          // variants={itemVariants}
+            className={`relative mx-auto ${imageOrderClass} w-full px-4 sm:px-0 max-w-[280px] sm:max-w-[350px] lg:max-w-[471px]`}
           >
-            {/* Decorative Background Element */}
+            {/* Decorative Background Element - Mobile responsive */}
             <motion.div
-              className={`absolute w-[300px] h-[317px] md:w-[472px] md:h-[500px] bg-[#090909] rounded-[32px] z-0`}
+              className={`absolute bg-[#090909] rounded-2xl sm:rounded-3xl z-0
+                w-[260px] h-[280px] 
+                sm:w-[320px] sm:h-[340px] 
+                lg:w-[400px] lg:h-[420px] 
+                xl:w-[472px] xl:h-[500px]
+              `}
               style={{
-                top: reverseLayout ? 'auto' : '10%',
-                bottom: reverseLayout ? '10%' : 'auto',
-                left: reverseLayout ? 'auto' : '-20%',
-                right: reverseLayout ? '-20%' : 'auto',
-                transform: reverseLayout ? 'translate(0, 0)' : 'translateY(10%)',
-                filter: 'blur(2px)'
+                top: reverseLayout ? 'auto' : '8%',
+                bottom: reverseLayout ? '8%' : 'auto',
+                left: reverseLayout ? 'auto' : '-10%',
+                right: reverseLayout ? '-10%' : 'auto',
+                transform: reverseLayout ? 'translate(0, 0)' : 'translateY(5%)',
+                filter: 'blur(1.5px)'
               }}
-              initial={{ y: reverseLayout ? 0 : 0 }}
-              whileInView={{ y: reverseLayout ? -20 : -30 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.5 }}
+              initial={{
+                y: 0,
+                scale: 0.95
+              }}
+              whileInView={{
+                y: reverseLayout ? -15 : -20,
+                scale: 1
+              }}
+              transition={{
+                duration: 1.2,
+                ease: "easeOut",
+                scale: { duration: 0.8 }
+              }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <div
-                className="relative w-full h-full bg-cover bg-center rounded-[32px]"
+                className="relative w-full h-full bg-cover bg-center rounded-2xl sm:rounded-3xl"
                 style={{
                   backgroundImage: `url(${secondaryImageSrc})`,
                 }}
               />
             </motion.div>
 
-            {/* Main Mockup Card */}
+            {/* Main Mockup Card - Mobile responsive sizing */}
             <motion.div
-              className="relative w-full h-[405px] md:h-[637px] bg-[#ffffff0a] rounded-[32px] backdrop-blur-[15px] backdrop-brightness-[100%] border-0 z-10 overflow-hidden"
-              initial={{ y: reverseLayout ? 0 : 0 }}
-              whileInView={{ y: reverseLayout ? 20 : 30 }}
-              transition={{ duration: 1.2, ease: "easeOut", delay: 0.1 }}
-              viewport={{ once: true, amount: 0.5 }}
+              className={`relative bg-[#ffffff0a] rounded-2xl sm:rounded-3xl backdrop-blur-[15px] backdrop-brightness-[100%] border-0 z-10 overflow-hidden
+                w-full h-[350px] 
+                sm:h-[420px] 
+                lg:h-[520px] 
+                xl:h-[637px]
+              `}
+              initial={{
+                y: 0,
+                scale: 0.9,
+                opacity: 0.8
+              }}
+              whileInView={{
+                y: reverseLayout ? 15 : 20,
+                scale: 1,
+                opacity: 1
+              }}
+              transition={{
+                duration: 1.2,
+                ease: "easeOut",
+                delay: 0.1,
+                scale: { duration: 0.8 },
+                opacity: { duration: 0.6 }
+              }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <div className="p-0 h-full">
                 <div
-                  className="h-full relative"
+                  className="h-full relative rounded-2xl sm:rounded-3xl overflow-hidden"
                   style={{
-                    backgroundSize: "100% 100%",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
                   }}
                 >
-                  {/* Primary Image */}
+                  {/* Primary Image with responsive sizing */}
                   <div
-                    className="w-full h-full bg-cover bg-center"
+                    className="w-full h-full bg-cover bg-center transition-transform duration-700 hover:scale-105"
                     style={{
                       backgroundImage: `url(${primaryImageSrc})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
                     }}
                   />
+
+                  {/* Mobile-specific overlay for better text readability if needed */}
+                  <div className="absolute inset-0 bg-black/5 sm:bg-transparent rounded-2xl sm:rounded-3xl" />
                 </div>
               </div>
             </motion.div>
+
+            {/* Mobile-specific floating elements for visual enhancement */}
+            <motion.div
+              className="absolute top-4 right-4 w-3 h-3 bg-white/20 rounded-full blur-sm sm:hidden"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 0.8, 0.5]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            <motion.div
+              className="absolute bottom-8 left-4 w-2 h-2 bg-white/15 rounded-full blur-sm sm:hidden"
+              animate={{
+                scale: [1, 1.3, 1],
+                opacity: [0.3, 0.6, 0.3]
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5
+              }}
+            />
           </motion.div>
         </motion.div>
       </div>
@@ -141,6 +196,5 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
     </section>
   );
 };
-
 
 export default SectionWithMockup;
