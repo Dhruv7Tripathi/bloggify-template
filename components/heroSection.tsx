@@ -77,8 +77,10 @@ export function HeroSection() {
                     </div>
                   </Link>
 
-                  <h1 className="max-w-9xl mx-auto text-balance bg-gradient-to-br from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] font-bold leading-tight lg:mt-16">
-                    The Mindful Scroll
+                  <h1
+                    className="bg-gradient-stop mx-auto max-w-9xl text-balance bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/30 bg-clip-text py-2 text-5xl font-medium leading-[1.1] tracking-tighter text-transparent md:text-6xl lg:text-7xl"
+                  > The Mindful Scroll
+                    <br />
                     Insights, Stories, and Inspiration
                   </h1>
 
@@ -109,13 +111,13 @@ export function HeroSection() {
                       size="lg"
                       className="rounded-xl px-8 py-6 text-base font-semibold bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg hover:shadow-xl transition-all duration-300 "
                     >
-                      <Link href="/blog" className="flex items-center gap-2">
+                      <Link href="/#" className="flex items-center gap-2">
                         <span className="text-nowrap">Start Blogging</span>
                       </Link>
                     </Button>
                   </div>
 
-                  <Link href="/explore" className="group">
+                  <Link href="/#" className="group">
                     <button
                       className="rounded-xl flex flex-row px-8 py-6 text-base font-medium backdrop-blur-sm transition-all duration-300 "
                     >
