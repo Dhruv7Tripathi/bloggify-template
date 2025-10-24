@@ -30,7 +30,7 @@ const SignIn1 = () => {
       <div className="relative z-10 w-full max-w-sm rounded-3xl bg-gradient-to-r from-[#ffffff10] to-[#121212] backdrop-blur-sm  shadow-2xl p-8 flex flex-col items-center">
         {/* Logo */}
         <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 mb-6 shadow-lg">
-          <img src="/logo.jpg" />
+          <img src="/logo.jpg" className="rounded-full " />
         </div>
         {/* Title */}
         <h2 className="text-2xl font-semibold text-white mb-6 text-center">

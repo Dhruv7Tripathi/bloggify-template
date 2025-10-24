@@ -58,7 +58,7 @@ export function PricingSection({
 			{...props}
 		>
 			<div className="mx-auto max-w-xl space-y-2">
-				<h2 className="text-center text-2xl font-bold tracking-tight md:text-3xl lg:text-4xl">
+				<h2 className="text-center dark:text-neutral-50 text-neutral-950 text-2xl font-bold tracking-tight md:text-3xl lg:text-4xl">
 					{heading}
 				</h2>
 				{description && (

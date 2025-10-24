@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-
+import { Themetoggle } from './ui/themetoggle';
 const menuItems = [
   { name: 'Home', href: '/' },
   { name: 'Posts', href: '/#posts' },
@@ -45,7 +45,7 @@ const Navbar = () => {
                 />
               </Link>
 
-              <h3 className="text-xl font-bold ml-4 text-white">Bloggify</h3>
+              <h3 className="text-xl font-bold ml-4 mt-1 text-black dark:text-white">Bloggify</h3>
 
               <button
                 onClick={() => setMenuState(!menuState)}
@@ -91,6 +91,7 @@ const Navbar = () => {
 
                 )}
               >
+                <Themetoggle />
                 <Button
                   asChild
                   variant="outline"

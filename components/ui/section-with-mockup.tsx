@@ -37,7 +37,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
   const imageOrderClass = reverseLayout ? "lg:col-start-1" : "";
 
   return (
-    <section className="relative py-16 sm:py-24 lg:py-32 xl:py-48 bg-black overflow-hidden">
+    <section className="relative py-16 sm:py-24 lg:py-32 xl:py-48 bg-white dark:bg-black overflow-hidden">
       <div className="container max-w-[1320px] w-full px-4 sm:px-6 lg:px-10 relative z-10 mx-auto">
         <motion.div
           className={`grid grid-cols-1 gap-12 sm:gap-16 lg:gap-8 w-full items-center ${layoutClasses}`}
@@ -51,12 +51,12 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
             className={`flex flex-col items-start gap-3 sm:gap-4 max-w-full sm:max-w-[546px] mx-auto lg:mx-0 ${textOrderClass}`}
           >
             <div className="space-y-2 sm:space-y-3 lg:space-y-1">
-              <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight sm:leading-tight lg:leading-normal">
+              <h2 className="text-black dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight sm:leading-tight lg:leading-normal">
                 {title}
               </h2>
             </div>
 
-            <p className="text-[#868f97] text-sm sm:text-base lg:text-[15px] leading-relaxed sm:leading-6">
+            <p className="dark:text-neutral-100 text-neutral-900 text-sm sm:text-base lg:text-[15px] leading-relaxed sm:leading-6">
               {description}
             </p>
           </motion.div>
@@ -67,7 +67,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
           >
             {/* Decorative Background Element - Mobile responsive */}
             <motion.div
-              className={`absolute bg-[#090909] rounded-2xl sm:rounded-3xl z-0
+              className={`absolute dark:bg-[#090909] bg-neutral-100 rounded-2xl sm:rounded-3xl z-0
                 w-[260px] h-[280px] 
                 sm:w-[320px] sm:h-[340px] 
                 lg:w-[400px] lg:h-[420px] 
@@ -106,7 +106,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
 
             {/* Main Mockup Card - Mobile responsive sizing */}
             <motion.div
-              className={`relative bg-[#ffffff0a] rounded-2xl sm:rounded-3xl backdrop-blur-[15px] backdrop-brightness-[100%] border-0 z-10 overflow-hidden
+              className={`relative bg-neutral-50 dark:bg-[#ffffff0a] rounded-2xl sm:rounded-3xl backdrop-blur-[15px] backdrop-brightness-[100%] border-0 z-10 overflow-hidden
                 w-full h-[350px] 
                 sm:h-[420px] 
                 lg:h-[520px] 
@@ -150,14 +150,14 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
                   />
 
                   {/* Mobile-specific overlay for better text readability if needed */}
-                  <div className="absolute inset-0 bg-black/5 sm:bg-transparent rounded-2xl sm:rounded-3xl" />
+                  <div className="absolute inset-0 bg-white dark:bg-black/5 sm:bg-transparent rounded-2xl sm:rounded-3xl" />
                 </div>
               </div>
             </motion.div>
 
             {/* Mobile-specific floating elements for visual enhancement */}
             <motion.div
-              className="absolute top-4 right-4 w-3 h-3 bg-white/20 rounded-full blur-sm sm:hidden"
+              className="absolute top-4 right-4 w-3 h-3 bg-black dark:bg-white/20 rounded-full blur-sm sm:hidden"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 0.8, 0.5]
@@ -169,7 +169,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
               }}
             />
             <motion.div
-              className="absolute bottom-8 left-4 w-2 h-2 bg-white/15 rounded-full blur-sm sm:hidden"
+              className="absolute bottom-8 left-4 w-2 h-2 bg-black dark:bg-white/15 rounded-full blur-sm sm:hidden"
               animate={{
                 scale: [1, 1.3, 1],
                 opacity: [0.3, 0.6, 0.3]

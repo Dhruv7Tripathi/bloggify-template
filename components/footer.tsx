@@ -6,7 +6,7 @@ import { ArrowRight, Github, Twitter, Linkedin, Heart, ExternalLink } from "luci
 const Footer = () => {
   return (
     <>
-      <footer className="relative bg-neutral-900/[1.89]">
+      <footer className="relative bg-neutral-100 dark:bg-neutral-900/[1.89]">
         <div className="relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 sm:gap-12">
@@ -104,7 +104,7 @@ const Footer = () => {
 
                 {/* Resources Column */}
                 <div>
-                  <h4 className="font-semibold text-white mb-4 sm:mb-6 text-base sm:text-lg">Resources</h4>
+                  <h4 className="font-semibold text-black dark:text-white mb-4 sm:mb-6 text-base sm:text-lg">Resources</h4>
                   <div className="flex flex-col space-y-3 sm:space-y-4">
                     {[
                       { href: "/privacy", label: "Privacy Policy" },
@@ -126,7 +126,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom Copyright Section */}
-          <div className="border-t border-neutral-900 bg-neutral-900/[1.98]">
+          <div className="border-t border-neutral-300 dark:border-neutral-900 bg-neutral-900/[1.98]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-sm text-muted-foreground text-center">
                 <div className="flex items-center gap-2">
@@ -134,7 +134,7 @@ const Footer = () => {
                   <Heart className="size-4 text-red-500 fill-current animate-pulse" />
                   <span>by</span>
                   <Link
-                    href="https://github.com/dhruv7tripathi"
+                    href="https://layrdui.dhruvtripathi.in"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium text-primary hover:text-primary/80 transition-colors duration-200 touch-manipulation"
