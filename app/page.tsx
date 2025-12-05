@@ -47,7 +47,7 @@ export default function Home() {
           </Accordion>
         </div>
       </section>
-      <div className="bg-black">
+      <section className="bg-black">
         <Cta4
           title="Blogging Made Easy"
           description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto illo praesentium nisi, accusantium quae."
@@ -61,7 +61,7 @@ export default function Home() {
             "Hundreds of Blocks"
           ]}
         />
-      </div>
+      </section>
 
       <Footer />
     </>

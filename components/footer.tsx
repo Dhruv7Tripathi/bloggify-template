@@ -38,7 +38,7 @@ const Footer = () => {
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
                   <span>Building in public at</span>
                   <Link
-                    href="https://layrdui.vercel.app"
+                    href="https://layrdui.in"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 font-medium text-primary hover:text-primary/80 transition-colors duration-200"
@@ -134,7 +134,7 @@ const Footer = () => {
                   <Heart className="size-4 text-red-500 fill-current animate-pulse" />
                   <span>by</span>
                   <Link
-                    href="https://layrdui.dhruvtripathi.in"
+                    href="https://layrdui.in"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium text-primary hover:text-primary/80 transition-colors duration-200 touch-manipulation"
