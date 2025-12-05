@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.layrdui.dhruvtripathi.in"),
+  metadataBase: new URL("https://bloggify-template.vercel.app/"),
   title: {
     default: "Bloggify - Template for Developers | LayrdUI",
     template: "%s | Bloggify - LayrdUI",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Bloggify - Template for Developers | LayrdUI",
     description:
       "A modern, developer-focused landing page template built with Next.js 15, TypeScript, and Tailwind CSS — perfect for SaaS, portfolios, and startups.",
-    url: "https://www.layrdui.dhruvtripathi.in/bloggify-template",
+    url: "https://bloggify-template.vercel.app/",
     siteName: "LayrdUI",
     images: [
       {
@@ -59,9 +59,9 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.layrdui.dhruvtripathi.in/bloggify-template",
+    canonical: "https://www.layrdui.in/bloggify-template",
   },
-  authors: [{ name: "LayrdUI Team", url: "https://www.layrdui.dhruvtripathi.in" }],
+  authors: [{ name: "LayrdUI Team", url: "https://www.layrdui.in" }],
   category: "Technology",
   robots: {
     index: true,
