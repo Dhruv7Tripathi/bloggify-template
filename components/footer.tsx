@@ -83,7 +83,7 @@ const Footer = () => {
                 {/* Navigation Column */}
                 <div>
                   <h4 className="font-semibold text-foreground mb-4 sm:mb-6 text-base sm:text-lg">Navigation</h4>
-                  <div className="flex flex-col space-y-3 sm:space-y-4">
+                  <div className="flex flex-col space-y-1 sm:space-y-2">
                     {[
                       { href: "#write", label: "Write" },
                       { href: "#allpost", label: "Blogs" },
@@ -105,7 +105,7 @@ const Footer = () => {
                 {/* Resources Column */}
                 <div>
                   <h4 className="font-semibold text-black dark:text-white mb-4 sm:mb-6 text-base sm:text-lg">Resources</h4>
-                  <div className="flex flex-col space-y-3 sm:space-y-4">
+                  <div className="flex flex-col space-y-1 sm:space-y-2">
                     {[
                       { href: "/privacy", label: "Privacy Policy" },
                       { href: "/terms", label: "Terms of Service" },
